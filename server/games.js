@@ -61,7 +61,10 @@ Game.prototype._addHadlers = () => {
 Game.prototype.endGame = (playerOut) =>{
     if (!this._players.legth) return;
     let opponent = +!playerOut;
-    opponent = this._players[opponent]
+    opponent = this._players[opponent];
+    this._players = [];
+    opponent.disconnect();
+    this.gameCollection.removeGame(this._id)
 }
 
 
