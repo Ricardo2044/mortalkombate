@@ -65,6 +65,12 @@ Game.prototype.endGame = (playerOut) =>{
     this._players = [];
     opponent.disconnect();
     this.gameCollection.removeGame(this._id)
+
+function gameCollection() {
+    this._games = {};
+};
+
+
 }
 
 
